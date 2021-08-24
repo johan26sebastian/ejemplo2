@@ -144,9 +144,14 @@ function saludo () {
 }
 saludo ();                                      /* resultado : nombre digitado + apellido digitado = nombre completo, -> nombre= johan apellido gutierrez
                                                 -> alert= bienvenido johan gutierrez */
-
-
-
+// escribir el color favorito de una persona y despues informe con dicho color
+function color () {
+    let color = prompt ("por favor escribe tu nombre");
+    let tono = prompt ("por favor escribe tu apellido");
+    let completo = color +" "+ tono;
+    alert ("tu color preferido es el " + completo)
+}
+color (); 
 
 
 
