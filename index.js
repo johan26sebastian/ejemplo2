@@ -1,7 +1,12 @@
-//si pones el ++ primero se suma 1 deuna
-let variable = 0;
-console.log(variable);
-console.log(++variable);
+//¡¡¡¡¡programacion imperativa¡¡¡
+// da ordenes al computador.
+
+//si pones el ++ primero se suma 1 deuna osea se suma el valor de la variable + 1 y de una se pone el resultado.
+let variable = 0; // con esto le dice al computador permitame una variable que se llama (variable) y que se cree con un valor =0.
+
+console.log(variable); // ahora en el espacio de consola lleneme un espacio donde este elcontenido de variable.
+
+console.log(++variable); // ahora en la consola muestrame un espacio en la cual le sume 1 y me muestre variable  
 // resultado
 //0
 //1
@@ -9,7 +14,7 @@ console.log(++variable);
 //si pones el ++ de ultimo se suma 1 deultimo por lo que aparece la variable primero
 let variable = 0;
 console.log(variable);
-console.log(variable++);
+console.log(variable++); // ahora en la consola muestrame un espacio en la cual me muestre variable y le sume 1
 // resultado:
 //0
 //0
@@ -30,4 +35,21 @@ console.log(variable++);
 //resultado:
 // ¡¡¡¡¡error¡¡¡¡
 
-alert
+// lo unica razon por la que no se necesita poner let(variable); es porque ya se halla definido de una vez anterior
+
+
+// alert (""); se usa para hacer un aviso o advertencia, el enunciado deseado se pone dentro de las comillas y los parentecis.
+alert("hola");
+
+//¡¡¡¡¡¡¡programacion funcional¡¡¡
+// todo se hace atraves de funciones
+
+
+// para poner {} hay que undir alt gr + {
+
+// ¡¡¡programacion orientado a objetos¡¡¡¡
+// automatiza mucho de lo que se hace
+
+
+
+
