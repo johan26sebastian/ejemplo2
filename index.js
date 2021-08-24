@@ -98,8 +98,21 @@ function sumar (argumento1, argumento2) {           // aqui pusimos sumar
     //19
 
     ///////////////////////////////////////////////////////////////
-    //3.0
-    // aqui sumamos 4 numeros en total
+    //3.0 aqui aremos el mismo de arriva pero mas reducido
+    function sumar () {           // aqui pusimos sumar.
+        let num1= parseInt( prompt ("escribe un numero"));        // con parseint () me ayuda a que sea una suma
+        let num2= parseInt( prompt ("escribe otro numero")); 
+        let suma = num1+num2;
+        console.log(suma);
+    }
+    sumar ();  
+    sumar ();
+    sumar ();
+
+
+
+    //4.0
+    // aqui sumamos 4 numeros en total juntos
 
     function sumar (argumento1, argumento2, argumento3, argumento4) {           // aqui pusimos sumar
         let suma = argumento1+argumento2+argumento3+argumento4;
