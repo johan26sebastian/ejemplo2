@@ -54,11 +54,33 @@ function sumar (argumento1, argumento2) {           // aqui pusimos sumar
     console.log(suma);
 }
 
-sumar (3,4);
+sumar (3,4);       // estos son los numeros que se suman
 // resultado = 7
 
 // para poner {} hay que undir alt gr + {
 
+    function sumar (argumento1, argumento2) {           // aqui pusimos sumar
+        let suma = argumento1+argumento2;
+        console.log(suma);
+    }
+
+    let num1= prompt ("escribe un numero");        // se usa para hacer preguntas en el navegador en este ejemplo habla de un numero
+    let num2= prompt ("escribe otro numero");    
+    
+    sumar (num1,num2);              // esto junta los numeros = num1 y num2 = num1num2/ con un ejemplo seria =10 y 7 = 107
+                                      // esto es porque prompt es un tipo texto cadena por lo que junta normalmente textos/ un ejemplo seria = toma + te = tomate.
+//////////////////////////////////////////////////////////////////////////////////////
+//2.0
+
+function sumar (argumento1, argumento2) {           // aqui pusimos sumar
+        let suma = argumento1+argumento2;
+        console.log(suma);
+    }
+
+    let num1= parseInt( prompt ("escribe un numero"));        // con parseint () me ayuda a que sea una suma
+    let num2= parseInt( prompt ("escribe otro numero"));    
+    
+    sumar (num1,num2);  
 // ¡¡¡programacion orientado a objetos¡¡¡¡
 // automatiza mucho de lo que se hace
 
