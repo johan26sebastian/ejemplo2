@@ -81,6 +81,23 @@ function sumar (argumento1, argumento2) {           // aqui pusimos sumar
     let num2= parseInt( prompt ("escribe otro numero"));    
     
     sumar (num1,num2);  
+
+    num1= parseInt( prompt ("escribe un numero"));        // con parseint () me ayuda a que sea una suma
+    num2= parseInt( prompt ("escribe otro numero"));    
+    
+    sumar (num1,num2);  
+
+    num1= parseInt( prompt ("escribe un numero"));        // con parseint () me ayuda a que sea una suma
+    num2= parseInt( prompt ("escribe otro numero"));    
+    
+    sumar (num1,num2);  
+
+    // esto me da 3 resultados / ejemplo:
+    //11
+    //20
+    //19
+
+    
 // ¡¡¡programacion orientado a objetos¡¡¡¡
 // automatiza mucho de lo que se hace
 
