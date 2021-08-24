@@ -54,6 +54,9 @@ function sumar (argumento1, argumento2) {           // aqui pusimos sumar
     console.log(suma);
 }
 
+sumar (3,4);
+// resultado = 7
+
 // para poner {} hay que undir alt gr + {
 
 // ¡¡¡programacion orientado a objetos¡¡¡¡
