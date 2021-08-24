@@ -1,3 +1,5 @@
+//¡¡¡¡23/08/2021¡¡¡
+
 //¡¡¡¡¡programacion imperativa¡¡¡
 // da ordenes al computador.
 
@@ -129,9 +131,21 @@ function sumar (argumento1, argumento2) {           // aqui pusimos sumar
 
     // ejemplo: 2+2+2+2= 8
 
+
+//////¡¡¡¡¡24/08/2021¡¡¡¡¡¡¡¡¡
+
+// diseñar una funcion que capture el nombre del usuario y despues lo salude con dicho nimbre capturado.
+
+function saludo () {
+    let nombre = prompt ("por favor escribe tu nombre");
+    let apellido = prompt ("por favor escribe tu apellido");
+    let completo = nombre +" "+ apellido;
+    alert ("bienvenido " + completo)
+}
+saludo ();
+
+
+
+
 // ¡¡¡programacion orientado a objetos¡¡¡¡
 // automatiza mucho de lo que se hace
-
-
-
-
