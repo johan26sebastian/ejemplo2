@@ -142,7 +142,10 @@ function saludo () {
     let completo = nombre +" "+ apellido;
     alert ("bienvenido " + completo)
 }
-saludo ();
+saludo ();                                      /* resultado : nombre digitado + apellido digitado = nombre completo, -> nombre= johan apellido gutierrez
+                                                -> alert= bienvenido johan gutierrez */
+
+
 
 
 
