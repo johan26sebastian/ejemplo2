@@ -97,7 +97,25 @@ function sumar (argumento1, argumento2) {           // aqui pusimos sumar
     //20
     //19
 
-    
+    ///////////////////////////////////////////////////////////////
+    //3.0
+    // aqui sumamos 4 numeros en total
+
+    function sumar (argumento1, argumento2, argumento3, argumento4) {           // aqui pusimos sumar
+        let suma = argumento1+argumento2+argumento3+argumento4;
+        console.log(suma);
+    }
+
+    let num1= parseInt( prompt ("escribe un numero"));        // con parseint () me ayuda a que sea una suma
+    let num2= parseInt( prompt ("escribe otro numero"));    
+    let num3= parseInt (prompt ("escribe el tercer numero"));
+    let num4= parseInt (prompt ("escribe el cuarto numero"));
+
+
+    sumar (num1,num2,num3,num4); 
+
+    // ejemplo: 2+2+2+2= 8
+
 // ¡¡¡programacion orientado a objetos¡¡¡¡
 // automatiza mucho de lo que se hace
 
