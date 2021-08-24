@@ -44,6 +44,15 @@ alert("hola");
 //¡¡¡¡¡¡¡programacion funcional¡¡¡
 // todo se hace atraves de funciones
 
+function ______ () {           // lo que va hay (______) es lo que queremos hacer (suma,resta,division, multiplicacion); los() es el espacio para los argumentos
+
+}                              // los argumentos son variables que se le pasan a la funcion
+
+
+function sumar (argumento1, argumento2) {           // aqui pusimos sumar
+    let suma = argumento1+argumento2;
+    console.log(suma);
+}
 
 // para poner {} hay que undir alt gr + {
 
