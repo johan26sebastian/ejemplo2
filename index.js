@@ -198,7 +198,7 @@ function comprar () {
     alert ("que gusto tenerlo en nuestras tiendas querido " + tratamiento)
     alert ("al parecer lo que necesitas es un/una " + completo)
 }
-comprar ();
+comprar (); 
 
 // ¡¡¡programacion orientado a objetos¡¡¡¡
 // automatiza mucho de lo que se hace
