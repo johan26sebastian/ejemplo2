@@ -169,7 +169,7 @@ function saludo () {
 }
 saludo ();  
  
-//////////
+////////// poner el nimbre clase de membresia y producto con su ranga de precio y dependeiendo la memebrecia un saludo distinto y avisos de lo otro
 
 function comprar () {
     let nombre = prompt ("por favor escribe tu nombre");
