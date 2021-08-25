@@ -157,7 +157,20 @@ color ();
 
 
 
-  
+/////////////
+// escribir un nombre y escribir un color y luego saludarte con dicho nombre y decirte cual color y tono son sus preferidos 
+
+function saludo () {
+    let nombre = prompt ("por favor escribe tu nombre");
+    let apellido = prompt ("por favor escribe tu apellido");
+    let completos = nombre +" "+ apellido;
+    let color = prompt ("por favor escribe el color con el que mas te familiarisas");
+    let tono = prompt ("por favor escribe un tono que te guste");
+    let completo = color +" "+ tono;
+    alert ("bienvenido " + completos)
+    alert ("al parecer tu color preferido es el " + completo)
+}
+saludo ();  
  
 
 
