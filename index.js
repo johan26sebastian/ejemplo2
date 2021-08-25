@@ -154,9 +154,6 @@ function color () {
 color (); 
 
 
-
-
-
 /////////////
 // escribir un nombre y escribir un color y luego saludarte con dicho nombre y decirte cual color y tono son sus preferidos 
 
@@ -172,8 +169,36 @@ function saludo () {
 }
 saludo ();  
  
+//////////
 
+function comprar () {
+    let nombre = prompt ("por favor escribe tu nombre");
+    let apellido = prompt ("por favor escribe tu apellido");
+    let completos = nombre +" "+ apellido;
+    let cliente = prompt (" por favor dijite el grado de su membrecia en minuscula");
+    let tratamiento;
 
+    if ( cliente == "vip") {
+        tratamiento = " querido doctor";
+    }
+    if ( cliente == "diamante") {
+        tratamiento = " querido doctor";
+    }
+    if ( cliente == "platino") {
+        tratamiento = " querido señor";
+    }
+    else {
+        tratamiento = "querido cliente";
+    }
+    
+    let desear = prompt ("por favor escriba lo que desea comprar");
+    let rango = prompt ("por favor escribe un rango de precio para su compra");
+    let completo = desear +" desde $ "+ rango;
+    alert ("bienvenido " + completos)
+    alert ("que gusto tenerlo en nuestras tiendas " + tratamiento)
+    alert ("al parecer lo que necesitas es un/una " + completo)
+}
+comprar (); 
 
 // ¡¡¡programacion orientado a objetos¡¡¡¡
 // automatiza mucho de lo que se hace
