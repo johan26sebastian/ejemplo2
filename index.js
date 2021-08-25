@@ -179,26 +179,26 @@ function comprar () {
     let tratamiento;
 
     if ( cliente == "vip") {
-        tratamiento = " querido doctor";
+        tratamiento = "doctor";
     }
     if ( cliente == "diamante") {
-        tratamiento = " querido doctor";
+        tratamiento = "doctor";
     }
     if ( cliente == "platino") {
-        tratamiento = " querido señor";
+        tratamiento = "señor";
     }
     else {
-        tratamiento = "querido cliente";
+        tratamiento = "cliente";
     }
     
     let desear = prompt ("por favor escriba lo que desea comprar");
     let rango = prompt ("por favor escribe un rango de precio para su compra");
     let completo = desear +" desde $ "+ rango;
     alert ("bienvenido " + completos)
-    alert ("que gusto tenerlo en nuestras tiendas " + tratamiento)
+    alert ("que gusto tenerlo en nuestras tiendas querido " + tratamiento)
     alert ("al parecer lo que necesitas es un/una " + completo)
 }
-comprar (); 
+comprar ();
 
 // ¡¡¡programacion orientado a objetos¡¡¡¡
 // automatiza mucho de lo que se hace
