@@ -144,14 +144,21 @@ function saludo () {
 }
 saludo ();                                      /* resultado : nombre digitado + apellido digitado = nombre completo, -> nombre= johan apellido gutierrez
                                                 -> alert= bienvenido johan gutierrez */
-// escribir el color favorito de una persona y despues informe con dicho color
+// escribir el color y tono preferido de una persona y luego informe con dicho color y tono juntos
 function color () {
-    let color = prompt ("por favor escribe un color");
-    let tono = prompt ("por favor escribe un tono");
+    let color = prompt ("por favor escribe el color con el que mas te familiarisas");
+    let tono = prompt ("por favor escribe un tono que te guste");
     let completo = color +" "+ tono;
     alert ("tu color preferido es el " + completo)
 }
 color (); 
+
+
+
+
+
+  
+ 
 
 
 
