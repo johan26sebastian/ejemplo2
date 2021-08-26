@@ -169,8 +169,11 @@ function saludo () {
 }
 saludo ();  
  
+////25/08/2021//////
+
 ////////// poner el nimbre clase de membresia y producto con su ranga de precio y dependeiendo la memebrecia un saludo distinto y avisos de lo otro
 
+/// la grafica acontinuacion contiene todo lo que yo queria hacer en una sola funcion, pero al parecer el if () {} solo funsiona como una sola opcion en una funsion
 function comprar () {
     let nombre = prompt ("por favor escribe tu nombre");
     let apellido = prompt ("por favor escribe tu apellido");
@@ -186,6 +189,85 @@ function comprar () {
     }
     if ( cliente == "platino") {
         tratamiento = "señor";
+    }
+    else {
+        tratamiento = "cliente";
+    }
+    
+    let desear = prompt ("por favor escriba lo que desea comprar");
+    let rango = prompt ("por favor escribe un rango de precio para su compra");
+    let completo = desear +" desde $ "+ rango;
+    alert ("bienvenido " + completos)
+    alert ("que gusto tenerlo en nuestras tiendas querido " + tratamiento)
+    alert ("al parecer lo que necesitas es un/una " + completo)
+}
+comprar (); 
+
+//// acontinuacion se muestra cada if de arriva con una funcion diferente:     ¡¡¡¡
+
+// aca funciona con platino
+
+function comprar () {
+    let nombre = prompt ("por favor escribe tu nombre");
+    let apellido = prompt ("por favor escribe tu apellido");
+    let completos = nombre +" "+ apellido;
+    let cliente = prompt (" por favor dijite el grado de su membrecia en minuscula");
+    let tratamiento;
+
+    if ( cliente == "platino") {
+        tratamiento = "señor";
+    }
+    else {
+        tratamiento = "cliente";
+    }
+    
+    let desear = prompt ("por favor escriba lo que desea comprar");
+    let rango = prompt ("por favor escribe un rango de precio para su compra");
+    let completo = desear +" desde $ "+ rango;
+    alert ("bienvenido " + completos)
+    alert ("que gusto tenerlo en nuestras tiendas querido " + tratamiento)
+    alert ("al parecer lo que necesitas es un/una " + completo)
+}
+comprar (); 
+
+///////////
+//// aca funsiona con diamante
+
+function comprar () {
+    let nombre = prompt ("por favor escribe tu nombre");
+    let apellido = prompt ("por favor escribe tu apellido");
+    let completos = nombre +" "+ apellido;
+    let cliente = prompt (" por favor dijite el grado de su membrecia en minuscula");
+    let tratamiento;
+
+    if ( cliente == "diamante") {
+        tratamiento = "doctor";
+    }
+    else {
+        tratamiento = "cliente";
+    }
+    
+    let desear = prompt ("por favor escriba lo que desea comprar");
+    let rango = prompt ("por favor escribe un rango de precio para su compra");
+    let completo = desear +" desde $ "+ rango;
+    alert ("bienvenido " + completos)
+    alert ("que gusto tenerlo en nuestras tiendas querido " + tratamiento)
+    alert ("al parecer lo que necesitas es un/una " + completo)
+}
+comprar (); 
+
+///////////////
+/// aca funciona con vip
+
+function comprar () {
+    let nombre = prompt ("por favor escribe tu nombre");
+    let apellido = prompt ("por favor escribe tu apellido");
+    let completos = nombre +" "+ apellido;
+    let cliente = prompt (" por favor dijite el grado de su membrecia en minuscula");
+    let tratamiento;
+
+    if ( cliente == "vip") {
+        tratamiento = "doctor";
     }
     else {
         tratamiento = "cliente";
