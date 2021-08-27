@@ -282,5 +282,5 @@ function comprar () {
 }
 comprar (); 
 
-// ¡¡¡programacion orientado a objetos¡¡¡¡
-// automatiza mucho de lo que se hace
+/// 27/08/2021//
+// esta en 1.js->
