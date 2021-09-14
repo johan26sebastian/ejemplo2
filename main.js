@@ -129,9 +129,11 @@ por lo que se le escriba aca donde esta ese id y asi mismo con lo del parrafo */
 
 /* en esta le estoy diciendo primero cabieme el texto del parrafo o donde tenga el id parrafo por "mi nuevo parrafo",
  pero luego le estoy diciendo que cabie "mi nuevo parrafo" por "elemento 1 y elemnto 2" en formal de lista  */
-window.onload = () => {
-  const parrafo = document.getElementById("parrafo")
-  parrafo.innerText = "mi nuevo parrafo";
-  parrafo.innerHTML = "<ul><li>elemento 1</li><li>elemento 2</li></ul>"
-}
+//window.onload = () => {
+  //const parrafo = document.getElementById("parrafo")
+  //parrafo.innerText = "mi nuevo parrafo";
+  //parrafo.innerHTML = "<ul><li>elemento 1</li><li>elemento 2</li></ul>"
+//}
+
+// lista de pendientes - to do list
 
