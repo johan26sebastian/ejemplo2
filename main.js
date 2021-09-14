@@ -107,4 +107,4 @@
 window.onload = () => {
     const parrafo = document.getElementById("parrafo")
     console.log(parrafo.innerHTML);
-}
+} 
