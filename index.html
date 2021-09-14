@@ -9,50 +9,10 @@
     </head>
     <body>
         <img src="imagenes/horario.png" class="img">
-        <h1> img</h1>
-        <h3>hola</h3>
-        <script>
-            function sin_titulo() {
-                var action, actual, apellido, completo, dos, estado, expresion, nacimiento, nombre, numbers, numero1, numero2, resultado, uno, variable;
-                document.write("Hola como estas?",'<BR/>');
-                estado = prompt();
-                document.write("Oh! me alegra saber eso ",'<BR/>');
-                document.write(" digita tu nombre porfa",'<BR/>');
-                nombre = prompt();
-                document.write(" digita tu apellido",'<BR/>');
-                apellido = prompt();
-                variable = expresion;
-                completo = "Bienvenido "+nombre+" "+apellido;
-                document.write(completo,'<BR/>');
-                document.write("acontinuacion sacaremos tu edad:",'<BR/>');
-                document.write("por favor digite el año actual:",'<BR/>');
-                actual = Number(prompt());
-                document.write("por favor digite año en que nacio",'<BR/>');
-                nacimiento = Number(prompt());
-                document.write("tu edad en años es de",'<BR/>');
-                variable = expresion;
-                resultado = actual-nacimiento;
-                document.write(resultado,'<BR/>');
-                document.write("acontinuacion sabremos si tu salalrio actual es mayor o igual que al del año pasado:",'<BR/>');
-                document.write("por favor digite el salario que tienes:",'<BR/>');
-                numero1 = prompt();
-                document.write("por favor digite el salario del año pasado",'<BR/>');
-                numero2 = prompt();
-                document.write("tu salario actual es mayor o gual al del año pasado?",'<BR/>');
-                variable = expresion;
-                action = numero1>=numero2;
-                document.write(action,'<BR/>');
-                document.write("ahora vamos a saber, si tu divides el salario en partes iguales, para darlo a otras personas cunto le corresponde a cada una de las personas y a ti:",'<BR/>');
-                document.write("por favor digite el salario actual:",'<BR/>');
-                uno = Number(prompt());
-                document.write("por favor digite la cantidad de personas a las cuales les das dinero",'<BR/>');
-                dos = Number(prompt());
-                document.write("la cantidad de dinero que le corresponde a cada persona en parte igual es de:",'<BR/>');
-                variable = expresion;
-                numbers = uno/dos;
-                document.write(numbers,'<BR/>');
-            }
-            sin_titulo();
-        </script>
+        <h1 id="titulo"> img</h1>
+        <p id="parrafo">hola</p>
+        
     </body>
+    <script src="main.js"></script>
 </html>
+
