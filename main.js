@@ -103,8 +103,35 @@
 
 // esto ayudara que el que tenga id ="titulo" aparesaca despues de inspeccionar en gogle, osea en la pagina html hay diferentes etiquetas y en la etiqueta h1 puse el id titulo por lo que  hace que el contenido de esta etiqueta se vea en consolo
 
-// aca es para que el parrafo tambien salga "       "
+// aca es para que el parrafo salga "       "
+
+//window.onload = () => {
+//    const parrafo = document.getElementById("parrafo")
+//    console.log(parrafo.innerHTML);
+//} 
+
+// con la  de abajo me sale las que tengan tanto el id de parrafo como el de titulo
+//window.onload = () => {
+  //const parrafo = document.getElementById("parrafo")
+  //console.log(parrafo.innerHTML);
+  //const titulo = document.getElementById("titulo")
+  //console.log(titulo.innerHTML);
+//}
+
+/* vamos a insertar nuevo texto osea si donde esta el id de titulo dice img el contenido de este se cambiara
+por lo que se le escriba aca donde esta ese id y asi mismo con lo del parrafo */
+//window.onload = () => {
+//  const parrafo = document.getElementById("parrafo")
+//  parrafo.innerText = "mi nuevo parrafo";
+//  const titulo = document.getElementById("titulo")
+// titulo.innerText = "Nuevo texto";
+//}
+
+/* en esta le estoy diciendo primero cabieme el texto del parrafo o donde tenga el id parrafo por "mi nuevo parrafo",
+ pero luego le estoy diciendo que cabie "mi nuevo parrafo" por "elemento 1 y elemnto 2" en formal de lista  */
 window.onload = () => {
-    const parrafo = document.getElementById("parrafo")
-    console.log(parrafo.innerHTML);
-} 
+  const parrafo = document.getElementById("parrafo")
+  parrafo.innerText = "mi nuevo parrafo";
+  parrafo.innerHTML = "<ul><li>elemento 1</li><li>elemento 2</li></ul>"
+}
+
