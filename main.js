@@ -90,8 +90,10 @@
  //   document.write(numbers,'<BR/>');
 // }
 
-// esto da igual que el de arriva lo unico que cabia e que lo unico que vsa a aparecer en la pagina es el cpntenido de la funcion
+// esto da igual que el de arriva lo unico que cabia e que lo unico que va a aparecer en la pagina es el contenido de la funcion mas no de la pagina como tal
 // encambio el otro muestra todo: titulos imagenes + funcion , etc 
+
+//111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 
 
 //window.onload = () => {
@@ -99,7 +101,7 @@
 //    console.log(titulo.innerHTML);
 //}
 
-// esto ayudara que el que tenga id ="titulo" aparesaca despues de inspeccionar en gogle
+// esto ayudara que el que tenga id ="titulo" aparesaca despues de inspeccionar en gogle, osea en la pagina html hay diferentes etiquetas y en la etiqueta h1 puse el id titulo por lo que  hace que el contenido de esta etiqueta se vea en consolo
 
 // aca es para que el parrafo tambien salga "       "
 window.onload = () => {
