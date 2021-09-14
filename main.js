@@ -136,4 +136,131 @@ por lo que se le escriba aca donde esta ese id y asi mismo con lo del parrafo */
 //}
 
 // lista de pendientes - to do list
+//<input type="submit" value="añadir"></input> esto es para poner el boton y lo que se desea poner en el boton se pone en 
+// value.
 
+//<input type="text" id="pendiente" placeholder="Escribe tu pendiente"></input> este me siver para poner el recuadro para escribir
+//la respuestas y placeholder es para poner un pedazo de texto que deseas que aparesca pero al tratar de llenar el texto se borra automaticamente
+
+// un ejemplo de un formulario completo es asi:
+/*<form id="formulario-pendiente">
+<input type="text" id="pendiente" placeholder="Escribe tu pendiente">
+<input type="submit" value="añadir">
+</form>*/
+
+// ojo todo va en html
+// la funsion acontinuacion si es en js y es una funcion de formulario
+//window.onload = () => {
+  //const formulario = document.getElementById("formulario-pendiente");
+  //formulario.onsubmit = (e) => {
+  //const pendiente = document.getElementById("pendiente");
+    //contenidopendiente = pendiente.value;
+    //pendiente.value = ""; 
+    //console.log(contenidopendiente);
+  //}
+//}
+
+// para evitar la autorecarga de la pagina y que nos quede evidencia en console se pone lo sgte
+// el argumento (e) se le pone e.preventDefault();, todo eso debajo de donde dice formulario.onsubmit
+
+//window.onload = () => {
+  //const formulario = document.getElementById("formulario-pendiente");
+  //formulario.onsubmit = (e) => {
+    //e.preventDefault();
+    //const pendiente = document.getElementById("pendiente");
+    //contenidopendiente = pendiente.value;
+    //pendiente.value = ""; 
+    //console.log(contenidopendiente);
+  //}
+//}
+// en la anterior ya esta hecha la modificacion
+
+//  const formulario = document.getElementById("formulario-pendiente");
+//la parte de formulario pdte es el id que se tomo en el form y si tiene otras cosas se pone las otras cosas
+
+// const pendiente = document.getElementById("pendiente"); la palabra pendiente se saca de la parte del id del html
+// de <input type="text" id="pendiente"
+
+////////////// aca se va a poner const pendientes, pendientes.push y console.log se le modifica lo de adentro con pdtes
+// esto lo que hara es que cada respuesta que se de se muestre[ aca adentreo cada una separada con una , y cada uno entre comillas " " ] como si fuera 
+// un espacio muestral y cada respuesta se va agregando al espacio muestral ej: ["hola", "como", "estas".....]
+//const pendientes = [];
+//window.onload = () => {
+  //const formulario = document.getElementById("formulario-pendiente");
+  //formulario.onsubmit = (e) => {
+    //e.preventDefault();
+    //const pendiente = document.getElementById("pendiente");
+    //contenidopendiente = pendiente.value;
+    //pendientes.push(contenidopendiente);
+    //pendiente.value = ""; 
+    //console.log(pendientes);
+  //}
+//}
+// [] para esto es alt gr + tilde
+/////////////// ahora vamos a tratar de que se aparezca ese acumulado en la pagina y en console a la vez
+// ej: si escribo 1 me aparece 1 y si escribo 2 me aparece ["1","1","2"]
+//const pendientes = [];
+//window.onload = () => {
+  //const formulario = document.getElementById("formulario-pendiente");
+  //formulario.onsubmit = (e) => {
+    //e.preventDefault();
+    //const pendiente = document.getElementById("pendiente");
+    //contenidopendiente = pendiente.value;
+    //pendientes.push(contenidopendiente);
+    //pendiente.value = ""; 
+    //console.log(pendientes);
+    //const listado = document.getElementById("lista-pendiente");
+    //for (let i = 0; i < pendientes.length; i++) {
+        //listado.innerHTML += "<li>" + pendientes[i] + "</li>";
+      
+    //}
+  //}
+//}
+// el arrive es pendientes
+// const listado = document.getElementById("lista-pendiente"), se pone lo que hayas escrito en el id del <ul> en la pag html
+
+
+/* ahora trataremos que solo aparezca el ultimo acumulado en la pagina y no todo* ej: si escribo 1 me aparece 1 y 
+si escribo 2 me aparezaca ["1","2"] */
+/*const pendientes = [];
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    console.log(pendientes);
+    const listado = document.getElementById("lista-pendiente");
+    listado.innerHTML = "";
+    for (let i = 0; i < pendientes.length; i++) {
+        listado.innerHTML += "<li>" + pendientes[i] + "</li>";
+      
+    }
+  }
+}*/
+
+// ahora vamos a simplificar el codigo de arriva
+
+const pendientes = [];
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    const listado = document.getElementById("lista-pendiente");
+    listado.innerHTML = "";
+    const plantilla = pendientes.map(p => {
+      
+    })
+    for (let i = 0; i < pendientes.length; i++) {
+        listado.innerHTML += "<li>" + pendientes[i] + "</li>";
+      
+    }
+    console.log(pendientes);
+  }
+}
