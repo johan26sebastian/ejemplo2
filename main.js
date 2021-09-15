@@ -199,6 +199,7 @@ por lo que se le escriba aca donde esta ese id y asi mismo con lo del parrafo */
 // [] para esto es alt gr + tilde
 /////////////// ahora vamos a tratar de que se aparezca ese acumulado en la pagina y en console a la vez
 // ej: si escribo 1 me aparece 1 y si escribo 2 me aparece ["1","1","2"]
+
 //const pendientes = [];
 //window.onload = () => {
   //const formulario = document.getElementById("formulario-pendiente");
@@ -220,8 +221,9 @@ por lo que se le escriba aca donde esta ese id y asi mismo con lo del parrafo */
 // const listado = document.getElementById("lista-pendiente"), se pone lo que hayas escrito en el id del <ul> en la pag html
 
 
-/* ahora trataremos que solo aparezca el ultimo acumulado en la pagina y no todo* ej: si escribo 1 me aparece 1 y 
+/*  1)   ahora trataremos que solo aparezca el ultimo acumulado en la pagina y no todo* ej: si escribo 1 me aparece 1 y 
 si escribo 2 me aparezaca ["1","2"] */
+
 /*const pendientes = [];
 window.onload = () => {
   const formulario = document.getElementById("formulario-pendiente");
@@ -241,7 +243,25 @@ window.onload = () => {
   }
 }*/
 
-// ahora vamos a simplificar el codigo de arriva
+// ahora vamos a simplificar el codigo de arriva, pero lo que pasa es que solo se puede ver en console y muestra todo el acumulado
+// y si se cambia el ultimo pendientes por plantilla se mostrara el li + p + li contextualmente
+/*const pendientes = [];
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    const listado = document.getElementById("lista-pendiente");
+    const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+    console.log(pendientes);
+  }
+}*/
+
+// esto me hara lo del 1) pero resumido  la funcion como tal
+// y ademas solo se mostrara una clase de lista en la pagina mas no en console
 
 const pendientes = [];
 window.onload = () => {
@@ -253,14 +273,8 @@ window.onload = () => {
     pendientes.push(contenidopendiente);
     pendiente.value = ""; 
     const listado = document.getElementById("lista-pendiente");
-    listado.innerHTML = "";
-    const plantilla = pendientes.map(p => {
-      
-    })
-    for (let i = 0; i < pendientes.length; i++) {
-        listado.innerHTML += "<li>" + pendientes[i] + "</li>";
-      
-    }
-    console.log(pendientes);
+    const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+    listado.innerHTML = plantilla.join("");
   }
 }
+
