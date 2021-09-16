@@ -263,7 +263,7 @@ window.onload = () => {
 // esto me hara lo del 1) pero resumido  la funcion como tal
 // y ademas solo se mostrara una clase de lista en la pagina mas no en console
 
-const pendientes = [];
+/*const pendientes = [];
 window.onload = () => {
   const formulario = document.getElementById("formulario-pendiente");
   formulario.onsubmit = (e) => {
@@ -277,4 +277,161 @@ window.onload = () => {
     listado.innerHTML = plantilla.join("");
   }
 }
+*/
 
+/// 15/09/2021
+/*
+const pendientes = [];
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    const listado = document.getElementById("lista-pendiente");
+    const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+    listado.innerHTML = plantilla.join("");
+    document.querySelectorAll("#lista-pendiente");
+
+  }
+}
+*/
+// document.querySelectorAll("#lista-pendiente");la oracion lista pendientes es el id del ul
+// y ademas siempre lleva un # adelante del ide al llenarse, 
+// y si se pone li al final de lo que va entre comillas me muestra la cantidad de cosas que tiene la lista dada y su li correspondiente pero se repite el espacio muestral
+// ej: document.querySelectorAll("#lista-pendiente li");
+
+/*
+const pendientes = [];
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    const listado = document.getElementById("lista-pendiente");
+    const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+    listado.innerHTML = plantilla.join("");
+    const elementos = document.querySelectorAll("#lista-pendiente li");
+    elementos.forEach((elemento, i) => {
+      console.log(elemento,i);
+      
+      });
+    })
+
+
+    const elementos = document.querySelectorAll("#lista-pendiente li");
+    Array.from(elementos); aqui se muestra el il de cada uno mas no muy detallado.
+
+    elementos.forEach(x => console.log(x)), esta etiqueta me muestra cual il detalladamente, le corresponde a cual parte de la lista 
+    
+     esto se mete en console para que se pueda ejecutar
+
+  }
+}
+
+*/
+
+// acontinuacion lo que nos va a hacer es que al dar click sobre la palabra o al lado me generara el <il> 
+//correspondiente de la palabra solamente y no generalizara todo el espacio muestral sino un solo elemento , todo eso en console
+
+
+
+/*const pendientes = [];
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    const listado = document.getElementById("lista-pendiente");
+    const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+    listado.innerHTML = plantilla.join("");
+    const elementos = document.querySelectorAll("#lista-pendiente li");
+    elementos.forEach((elemento, i) => {
+      elemento.addEventListener('click',()=>{
+        console.log(elemento,i);
+      });
+    })
+ 
+    // esto se mete en console para que se pueda ejecutar
+
+  }
+}
+
+*/
+
+// acontinuacion haremos una funcion que al pararse en un elemento de la lista y darle click desaparezca de la vista temporalmente 
+//pero al agregar un nuevo elemento vuelve a aparecer
+
+
+/*const pendientes = [];
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    const listado = document.getElementById("lista-pendiente");
+    const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+    listado.innerHTML = plantilla.join("");
+    const elementos = document.querySelectorAll("#lista-pendiente li");
+    elementos.forEach((elemento, i) => {
+      elemento.addEventListener('click',()=>{
+        elemento.parentNode.removeChild(elemento);
+      });
+    })
+ 
+    // esto se mete en console para que se pueda ejecutar
+
+  }
+}*/
+// esto hace e¡que al dar click aparezca en console y lo describa
+const pendientes = [];
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    const listado = document.getElementById("lista-pendiente");
+    const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+    listado.innerHTML = plantilla.join("");
+    const elementos = document.querySelectorAll("#lista-pendiente li");
+    elementos.forEach((elemento, i) => {
+      elemento.addEventListener('click',()=>{
+        console.log(elemento,i);
+        pendientes.splice(i,1);
+        console.log(pendientes, i);
+      });
+    })
+ 
+    // esto se mete en console para que se pueda ejecutar
+
+  }
+}
+
+// lo de acontinuacion nos muestra y nos ayuda 
+//a acortar uno de de los numeros acontinuacion y se va a anotar por medio de console osea del grupo de 1,2,3,45 va a quedar 1,2,45
+/*let arr = [1,2,3,45];
+console.log(arr);
+arr.splice(2,1);
+console.log(arr);
+//////////////////// la siguiente hace que el elemento que quitamos se separe y se muestre aparte y luego si se quita del conjunto.
+let arr = [1,2,3,45];
+console.log(arr);
+let arr2 = arr.splice(2,1);
+console.log(arr2);
+console.log(arr);*/
+
+// nota el numero 1 dentro del parentecisi del splice es el numero de numeros que quiero cortar
