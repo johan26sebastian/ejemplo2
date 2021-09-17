@@ -2,6 +2,11 @@ h1 {
     text-align: center;
     color: aqua;
     font-size: 1.5cm;
+    font-family: cursive;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-color: white;
+    border-width: 7px;
 }
 
 p {
@@ -9,7 +14,10 @@ p {
     font-size: 0.5cm;
 }
 
+
+
 body {
     font-family:cursive;
     background-color: coral;
+    
 }
