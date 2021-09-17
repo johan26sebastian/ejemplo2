@@ -537,7 +537,7 @@ window.onload = () => {
 }
 */
 
-//// con esa pasa lo mismo que lo de arriva solo que lo eliminada al recargar la pagina no aparece
+//// con esa pasa lo mismo que lo de arriva solo que lo eliminada al recargar la pagina no aparece, los eliminados antes de recargar aparecen en console
 
 /*
 const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
@@ -578,7 +578,7 @@ window.onload = () => {
 
 */
 
-//// es practicamente lo de arriva, la verdad no veo la diferencia
+//// es practicamente lo de arriva, solo que al eliminar un elemento de la lista no aprece este elemento en console
 
 const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
 const render = () => {
@@ -589,7 +589,6 @@ const render = () => {
   elementos.forEach((elemento, i) => {
     elemento.addEventListener('click',()=>{
       elemento.parentNode.removeChild(elemento);
-        console.log(elemento);
         pendientes.splice(i,1);
         actualizarpendientes(pendientes);
         render();
