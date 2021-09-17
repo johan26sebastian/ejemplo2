@@ -284,3 +284,20 @@ comprar ();
 
 /// 27/08/2021//
 // esta en 1.js->
+
+
+// 16/09/2021///
+localStorage.setItem('taller','negocio');
+localStorage.getItem('taller');
+
+localStorage.setItem('celular','cargador');
+localStorage.getItem('celular');
+
+localStorage.setItem('escritorio','silla');
+localStorage.getItem('escritorio');
+
+localStorage.setItem('cama','colchon');
+localStorage.getItem('cama');
+
+localStorage.setItem('sabanas','camisas');
+localStorage.getItem('sabanas');

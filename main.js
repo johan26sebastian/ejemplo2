@@ -337,7 +337,8 @@ window.onload = () => {
 */
 
 // acontinuacion lo que nos va a hacer es que al dar click sobre la palabra o al lado me generara el <il> 
-//correspondiente de la palabra solamente y no generalizara todo el espacio muestral sino un solo elemento , todo eso en console
+//correspondiente de la palabra solamente y no generalizara todo el espacio muestral sino un solo elemento ,
+// todo eso en console
 
 
 
@@ -394,7 +395,9 @@ window.onload = () => {
 
   }
 }*/
-// esto hace e¡que al dar click aparezca en console y lo describa
+// esto hace e¡que al dar click aparezca en console y lo describa y desaparezca en la pagina web
+// pero al agregar uno nuevo se carga el ultimo eliminado
+/*
 const pendientes = [];
 window.onload = () => {
   const formulario = document.getElementById("formulario-pendiente");
@@ -410,13 +413,206 @@ window.onload = () => {
     const elementos = document.querySelectorAll("#lista-pendiente li");
     elementos.forEach((elemento, i) => {
       elemento.addEventListener('click',()=>{
-        console.log(elemento,i);
+        elemento.parentNode.removeChild(elemento);
+        console.log(elemento);
         pendientes.splice(i,1);
         console.log(pendientes, i);
       });
     })
  
     // esto se mete en console para que se pueda ejecutar
+
+  }
+}
+*/
+
+// acontinuacion haremos uno muy parecido al de arriva lo unico que cambia
+// es que si le agregamos uno nuevo no va a volver el ultimo eliminado y ademas no va a aparecer el espacio muestral de todos los que eliminemos 
+// ej: si elimino hola y luego como estas, el espacio muestral nos mostrara hola y en otro aparte el como esta
+
+/*
+const pendientes = [];
+const render = () => {
+  const listado = document.getElementById("lista-pendiente");
+  const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+  listado.innerHTML = plantilla.join("");
+  const elementos = document.querySelectorAll("#lista-pendiente li");
+  elementos.forEach((elemento, i) => {
+    elemento.addEventListener('click',()=>{
+      elemento.parentNode.removeChild(elemento);
+        console.log(elemento);
+        pendientes.splice(i,1);
+        render();
+    });
+  })
+}
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendientes.push(contenidopendiente);
+    pendiente.value = ""; 
+    render();
+ // esto se mete en console para que se pueda ejecutar
+
+  }
+}
+
+*/
+// || para esto es alt gr + 1
+// esto hace que al recargar la pagina los elementos de la lista no se vea,
+// pero cuando agregas otro elemento aparecen los elementos de antes de recargar la pagina + el elemento nuevo 
+// mas cuando se toca aparece en console y se borra de la pagina web como la funcion de arriva
+
+/*
+const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
+const render = () => {
+  const listado = document.getElementById("lista-pendiente");
+  const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+  listado.innerHTML = plantilla.join("");
+  const elementos = document.querySelectorAll("#lista-pendiente li");
+  elementos.forEach((elemento, i) => {
+    elemento.addEventListener('click',()=>{
+      elemento.parentNode.removeChild(elemento);
+        console.log(elemento);
+        pendientes.splice(i,1);
+        render();
+    });
+  })
+}
+window.onload = () => {
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendiente.value = ""; 
+    pendientes.push(contenidopendiente);
+    const pendientescadena = JSON.stringify(pendientes);
+    localStorage.setItem('pendientes', pendientescadena)
+    render();
+ // esto se mete en console para que se pueda ejecutar
+
+  }
+}
+
+
+*/
+
+// window.onload = () => {    al ponerle render en esa parte a la funcion de arriva hace que al recargar la pagina no desaparezcan los elementos de la lista.
+  //render();
+/*
+const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
+const render = () => {
+  const listado = document.getElementById("lista-pendiente");
+  const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+  listado.innerHTML = plantilla.join("");
+  const elementos = document.querySelectorAll("#lista-pendiente li");
+  elementos.forEach((elemento, i) => {
+    elemento.addEventListener('click',()=>{
+      elemento.parentNode.removeChild(elemento);
+        console.log(elemento);
+        pendientes.splice(i,1);
+        render();
+    });
+  })
+}
+window.onload = () => {
+  render();
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendiente.value = ""; 
+    pendientes.push(contenidopendiente);
+    const pendientescadena = JSON.stringify(pendientes);
+    localStorage.setItem('pendientes', pendientescadena)
+    render();
+ // esto se mete en console para que se pueda ejecutar
+
+  }
+}
+*/
+
+//// con esa pasa lo mismo que lo de arriva solo que lo eliminada al recargar la pagina no aparece
+
+/*
+const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
+const render = () => {
+  const listado = document.getElementById("lista-pendiente");
+  const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+  listado.innerHTML = plantilla.join("");
+  const elementos = document.querySelectorAll("#lista-pendiente li");
+  elementos.forEach((elemento, i) => {
+    elemento.addEventListener('click',()=>{
+      elemento.parentNode.removeChild(elemento);
+        console.log(elemento);
+        pendientes.splice(i,1);
+        const pendientescadena = JSON.stringify(pendientes);
+        localStorage.setItem('pendientes', pendientescadena)
+        render();
+    });
+  })
+}
+window.onload = () => {
+  render();
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendiente.value = ""; 
+    pendientes.push(contenidopendiente);
+    const pendientescadena = JSON.stringify(pendientes);
+    localStorage.setItem('pendientes', pendientescadena)
+    render();
+
+
+ // esto se mete en console para que se pueda ejecutar
+
+  }
+}
+
+*/
+
+//// es practicamente lo de arriva, la verdad no veo la diferencia
+
+const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
+const render = () => {
+  const listado = document.getElementById("lista-pendiente");
+  const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+  listado.innerHTML = plantilla.join("");
+  const elementos = document.querySelectorAll("#lista-pendiente li");
+  elementos.forEach((elemento, i) => {
+    elemento.addEventListener('click',()=>{
+      elemento.parentNode.removeChild(elemento);
+        console.log(elemento);
+        pendientes.splice(i,1);
+        actualizarpendientes(pendientes);
+        render();
+    });
+  })
+}
+
+const actualizarpendientes = (pendientes) => {
+  const pendientescadena = JSON.stringify(pendientes);
+  localStorage.setItem('pendientes', pendientescadena);
+}
+window.onload = () => {
+  render();
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendiente.value = ""; 
+    pendientes.push(contenidopendiente);
+    actualizarpendientes(pendientes);
+    render();
+ // esto se mete en console para que se pueda ejecutar
 
   }
 }
