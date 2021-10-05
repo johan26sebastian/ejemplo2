@@ -579,6 +579,47 @@ window.onload = () => {
 */
 
 //// es practicamente lo de arriva, solo que al eliminar un elemento de la lista no aprece este elemento en console
+/*
+const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
+const render = () => {
+  const listado = document.getElementById("lista-pendiente");
+  const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+  listado.innerHTML = plantilla.join("");
+  const elementos = document.querySelectorAll("#lista-pendiente li");
+  elementos.forEach((elemento, i) => {
+    elemento.addEventListener('click',()=>{
+      elemento.parentNode.removeChild(elemento);
+        pendientes.splice(i,1);
+        actualizarpendientes(pendientes);
+        render();
+    });
+  })
+}
+
+const actualizarpendientes = (pendientes) => {
+  const pendientescadena = JSON.stringify(pendientes);
+  localStorage.setItem('pendientes', pendientescadena);
+}
+window.onload = () => {
+  render();
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendiente.value = ""; 
+    pendientes.push(contenidopendiente);
+    actualizarpendientes(pendientes);
+    render();
+
+  }
+} 
+*/
+
+                    // APARTIR DE AQUI ESTA EL 4 PERIODO
+
+//  ahora vamos a hacer un formulario aparte que nos tome todos los elementos de la lista que ya se hicieron o que se les dieron click para eliminarlos
+// osea vamos a hacer lo de arriva, mas un formulario aparte que nos tome los puntos de la lista que se elimine de arriva
 
 const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
 const render = () => {
@@ -611,10 +652,11 @@ window.onload = () => {
     pendientes.push(contenidopendiente);
     actualizarpendientes(pendientes);
     render();
- // esto se mete en console para que se pueda ejecutar
+ 
 
   }
 }
+
 
 // lo de acontinuacion nos muestra y nos ayuda 
 //a acortar uno de de los numeros acontinuacion y se va a anotar por medio de console osea del grupo de 1,2,3,45 va a quedar 1,2,45
