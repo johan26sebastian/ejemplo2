@@ -21,3 +21,7 @@ body {
     background-color: coral;
     
 }
+
+#lista-hechas li {
+    text-decoration:line-through;
+}

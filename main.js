@@ -618,10 +618,17 @@ window.onload = () => {
 
                     // APARTIR DE AQUI ESTA EL 4 PERIODO
 
-//  ahora vamos a hacer un formulario aparte que nos tome todos los elementos de la lista que ya se hicieron o que se les dieron click para eliminarlos
-// osea vamos a hacer lo de arriva, mas un formulario aparte que nos tome los puntos de la lista que se elimine de arriva
+
+/*
+
+ahora vamos con esto a que todos los elementos que fueron eliminados al dar click/ "osea lo de arriba"  cuando se da click se borra
+automaticamente; y esto hara que los borrados y eliminados de arriba se guarden en un grupo aparte
+ ¡¡¡ solo se puede ver en console(inspeccionar)-> luego consola -> se escribe lo sgte en consola "console.log(pendientes)" y luego eliminar el deseado y se ve en consola
+ o simplemente tocan el que van a eliminar y lo revisan en consola
 
 const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
+const hechas = JSON.parse(localStorage.getItem('hechas')) || [];
+
 const render = () => {
   const listado = document.getElementById("lista-pendiente");
   const plantilla = pendientes.map(p => "<li>" + p + "</li>");
@@ -629,8 +636,10 @@ const render = () => {
   const elementos = document.querySelectorAll("#lista-pendiente li");
   elementos.forEach((elemento, i) => {
     elemento.addEventListener('click',()=>{
-      elemento.parentNode.removeChild(elemento);
-        pendientes.splice(i,1);
+        elemento.parentNode.removeChild(elemento);
+        const cumplida = pendientes.splice(i,1)
+        hechas.push(cumplida);
+        console.log(hechas);
         actualizarpendientes(pendientes);
         render();
     });
@@ -657,6 +666,117 @@ window.onload = () => {
   }
 }
 
+*/
+
+//  ahora vamos a hacer un formulario aparte que nos tome todos los elementos de la lista que ya se hicieron o que se les dieron click para eliminarlos
+// osea vamos a hacer lo de arriva, mas un formulario aparte, que nos tome los puntos de la lista que se elimine de arriba
+// y se apropie de ellos. Y ademas con esto se puede ver todo el historial de los que eliminamos de la lista principal en consola (inspeccionar)
+// repetitidamente.  eso si, los de la lista de completados se elimina al recargar la pagina
+
+/*
+
+const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
+const hechas = JSON.parse(localStorage.getItem('hechas')) || [];
+
+const render = () => {
+  const listado = document.getElementById("lista-pendiente");
+  const listadoC = document.getElementById("lista-hechas");
+  const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+  const plantillac = hechas.map(p => "<li>" + p + "</li>");
+  listado.innerHTML = plantilla.join("");
+  listadoC.innerHTML = plantillac.join("");
+  const elementos = document.querySelectorAll("#lista-pendiente li");
+  elementos.forEach((elemento, i) => {
+    elemento.addEventListener('click',()=>{
+        elemento.parentNode.removeChild(elemento);
+        const cumplida = pendientes.splice(i,1)
+        hechas.push(cumplida);
+        console.log(hechas);
+        actualizarpendientes(pendientes);
+        render();
+    });
+  })
+}
+
+const actualizarpendientes = (pendientes) => {
+  const pendientescadena = JSON.stringify(pendientes);
+  localStorage.setItem('pendientes', pendientescadena);
+}
+window.onload = () => {
+  render();
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendiente.value = ""; 
+    pendientes.push(contenidopendiente);
+    actualizarpendientes(pendientes);
+    render();
+ 
+
+  }
+}
+
+// en css de main  pusimos una etiqueta de : #lista-hechas li {
+  //  text-decoration:line-through;
+  //}
+
+  // esto nos permite que los que se pusieron en la parte de lista hechas se tachen con una raya en el medio
+
+*/
+
+/// ahora vamos a hacer lo de arriba solo que vamos a quitar la vista del 'historial de eliminados' desde console (inspeccionar)
+
+const pendientes = JSON.parse(localStorage.getItem('pendientes')) || [];
+const hechas = JSON.parse(localStorage.getItem('hechas')) || [];
+
+const render = () => {
+  const listado = document.getElementById("lista-pendiente");
+  const listadoC = document.getElementById("lista-hechas");
+  const plantilla = pendientes.map(p => "<li>" + p + "</li>");
+  const plantillac = hechas.map(p => "<li>" + p + "</li>");
+  listado.innerHTML = plantilla.join("");
+  listadoC.innerHTML = plantillac.join("");
+  const elementos = document.querySelectorAll("#lista-pendiente li");
+  elementos.forEach((elemento, i) => {
+    elemento.addEventListener('click',()=>{
+        elemento.parentNode.removeChild(elemento);
+        const cumplida = pendientes.splice(i,1)
+        hechas.push(cumplida);
+        actualizarpendientes(pendientes);
+        render();
+    });
+  })
+}
+
+const actualizarpendientes = (pendientes) => {
+  const pendientescadena = JSON.stringify(pendientes);
+  localStorage.setItem('pendientes', pendientescadena);
+}
+window.onload = () => {
+  render();
+  const formulario = document.getElementById("formulario-pendiente");
+  formulario.onsubmit = (e) => {
+    e.preventDefault();
+    const pendiente = document.getElementById("pendiente");
+    contenidopendiente = pendiente.value;
+    pendiente.value = ""; 
+    pendientes.push(contenidopendiente);
+    actualizarpendientes(pendientes);
+    render();
+ 
+
+  }
+}
+
+// en css de main  pusimos una etiqueta de : #lista-hechas li {
+  //  text-decoration:line-through;
+  //}
+
+  // esto nos permite que los que se pusieron en la parte de lista hechas se tachen con una raya en el medio
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // lo de acontinuacion nos muestra y nos ayuda 
 //a acortar uno de de los numeros acontinuacion y se va a anotar por medio de console osea del grupo de 1,2,3,45 va a quedar 1,2,45
