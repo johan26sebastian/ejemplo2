@@ -2,14 +2,30 @@
 <html>
     <head>
         <title>first app with functions</title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="main.css">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
     </head>
     <body>
         <h1>
-            titulo
+            inicia sesion
         </h1>
         <p>
-            parrafo
+            Ingresa tu usuario y Contraseña:
         </p>
+        <form id="login-form">
+            <label for="usuario">
+                Usuario
+            </label>
+            <br>
+            <input type="text" id="usuario" placeholder="Nombre de usuario">
+            <br>
+            <label for="password">
+                Contraseña
+            </label>
+            <br>
+            <input type="password" id="password" placeholder="contraseña">
+            <br>
+            <input type="submit" value="iniciar sesion">
+        </form>
     </body>
 </html>

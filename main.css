@@ -25,3 +25,7 @@ body {
 #lista-hechas li {
     text-decoration:line-through;
 }
+
+form {
+    display: block;
+}
