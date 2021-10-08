@@ -26,6 +26,52 @@ body {
     text-decoration:line-through;
 }
 
-form {
+.cuestionario {
     display: block;
+    font-size: 0.60cm;
+}
+
+.cuestionarios {
+    display: block;
+    font-size: 0.55cm;
+}
+
+.letra {
+    font-size: 0.67cm;
+}
+
+.letras {
+    font-size: 0.65cm;
+}
+
+.letrad {
+    font-size: 0.60cm;
+}
+
+.inicio {
+    font-size: 0.75cm;
+}
+
+.boton {
+    font-size: 0.5cm;
+}
+
+.cajon1 {
+    font-size: 0.60cm;
+}
+
+.cajon2 {
+    font-size: 0.60cm;
+}
+
+.cajon3 {
+    font-size: 0.60cm;
+}
+
+.cajon4 {
+    font-size: 0.60cm;
+}
+
+.regi {
+    font-size: 0.45cm;
 }
