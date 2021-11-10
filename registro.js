@@ -43,7 +43,8 @@ window.onload = () => {
 // el mas "+" simboliza uno o mas espacio
 
 
-// aca abajo se hace para que cuando pones un espacio o mas en el formulario de usuario no lo registre como lleno sino como vacio osea que nada hay, hay
+// aca abajo se hace para que cuando pones un espacio o
+// mas en el formulario de usuario no lo registre como lleno sino como vacio osea que nada hay, haì
 
 function valida () {
     let usuario = document.getElementById ("usuario").value;
