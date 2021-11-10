@@ -46,6 +46,7 @@ window.onload = () => {
 // aca abajo se hace para que cuando pones un espacio o
 // mas en el formulario de usuario no lo registre como lleno sino como vacio osea que nada hay, haì
 
+/*
 function valida () {
     let usuario = document.getElementById ("usuario").value;
     if(/^\s+$/.test(usuario)||usuario.length==0) {
@@ -63,3 +64,27 @@ window.onload = () => {
         valida();
     }
 }
+
+*/
+
+function valida () {
+    let usuario = document.getElementById ("usuario").value;
+    console.log(/[0-9]{9}/.test(usuario));
+    if(/[0-9]{9}/.test(usuario)) {
+    console.log("variable vacia");
+    }
+    else {
+        console.log ("variable llena")
+    }
+};
+
+window.onload = () => {
+    const registro = document.getElementById("registro-form");
+    registro.onsubmit = (e) => {
+        e.preventDefault();
+        valida();
+    }
+}
+
+// para "[]" se unde alt gr + `
+/* /[0-9]{9}/ esto me muestra que para validarse tiene que tener numeros del 0-9 y minimo y maximo 9 numeros
