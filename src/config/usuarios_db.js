@@ -14,3 +14,22 @@ let tablaUsuarios = db.run
             console.log("Tabla creada correctamente")
         }
     });
+
+let insertarusuarios = db.run 
+    (
+        `INSERT INTO usuarios (
+            nom_usuarios,
+            correo_usuarios
+        )
+        VALUES (
+            'johann',
+            'johann.gutierrez@cea.edu.co'
+        );`,
+    (err) => {
+        if (err) {
+            console.log(err.message)
+        } 
+        else {
+            console.log("usuario creado");
+        }
+    });

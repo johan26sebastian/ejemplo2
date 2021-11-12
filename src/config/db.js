@@ -42,7 +42,44 @@ let tablaUsuarios = db.run
     (err) => {
         if (err) {
             console.log(err.message)
-        } else {
+        }
+        else {
+            console.log("Tabla creada correctamente")
+        }
+    });
+let insertarusuarios = db.run 
+    (
+        `INSERT INTO usuarios (
+          nom_usuarios,
+          correo_usuarios
+        )
+        VALUES (
+            'johann',
+            'johann.gutierrez@cea.edu.co'
+      );`,
+    (err) => {
+        if (err) {
+            console.log(err.message)
+        } 
+        else {
+            console.log("usuario creado");
+        }
+    });
+// crea la tabla usuarios
+
+let tablaPendientes = db.run 
+    (
+        `CREATE TABLE pendientes (
+          id_pendientes INTEGER PRIMARY KEY UNIQUE NOT NULL,
+          descripcion VARCHAR NOT NULL,
+          cumplida BOOLEAN,
+          activa BOOLEAN
+      );`,
+    (err) => {
+        if (err) {
+            console.log(err.message)
+        }
+        else {
             console.log("Tabla creada correctamente")
         }
     });
